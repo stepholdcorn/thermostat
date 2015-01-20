@@ -20,3 +20,8 @@ Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
      this.temperature -= changeTempBy;
 
 };
+
+Thermostat.prototype.switchOff = function() {
+  this.powerSave = false;
+  this.maximum = 32;
+};

@@ -43,14 +43,24 @@ describe('Thermostat', function() {
 
   });
 
-  describe('power save', function(){
+  describe('power saving mode', function(){
 
     it('should be on by default', function() {
       expect(thermostat.powerSave).toBe(true);
     });
 
-    it('should set the maximum temperature to 25 degrees', function() {
+    it('should be on and sets maximum temperature to be 25 degrees', function() {
       expect(thermostat.maximum).toEqual(25);
+    });
+
+    it('should be able to switch off', function(){
+      thermostat.switchOff();
+      expect(thermostat.powerSave).toBe(false);
+    });
+
+    it('should be off and sets maximum temperature to be 32 degrees', function() {
+      thermostat.switchOff();
+      expect(thermostat.maximum).toEqual(32);
     });
 
   });
