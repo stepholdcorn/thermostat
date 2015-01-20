@@ -34,6 +34,21 @@ describe('Thermostat', function() {
       expect(thermostat.minimum).toEqual(10);
     });
 
+    // it('not allow thermostat temp to be below 10 degrees', function(){
+    //   thermostat.decreaseTemperature(11);
+    //   expect(thermostat.temperature).toEqual(10);
+    // });
+
+    //If power saving mode is on, the maximum temperature is 25 degrees
+
+  });
+
+  describe('power save', function(){
+
+    it('if power save is on max temperature 25 degree', function(){
+      expect(thermostat.powerSaveOn).toBe(true);
+    });
+
   });
 
 });
