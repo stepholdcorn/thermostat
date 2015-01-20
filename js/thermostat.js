@@ -1,7 +1,8 @@
 var Thermostat = function() {
   this.temperature = 20;
   this.minimum = 10;
-  this.powerSaveOn = true;
+  this.powerSave = true;
+  this.maximum = 25;
 };
 
 Thermostat.prototype.increaseTemperature = function(changeTempBy) {

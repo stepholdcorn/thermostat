@@ -45,8 +45,12 @@ describe('Thermostat', function() {
 
   describe('power save', function(){
 
-    it('if power save is on max temperature 25 degree', function(){
-      expect(thermostat.powerSaveOn).toBe(true);
+    it('should be on by default', function() {
+      expect(thermostat.powerSave).toBe(true);
+    });
+
+    it('should set the maximum temperature to 25 degrees', function() {
+      expect(thermostat.maximum).toEqual(25);
     });
 
   });
