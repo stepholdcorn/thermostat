@@ -77,6 +77,13 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(32);
     });
 
+    it('should default to 25 degrees if switched off when temperature is above 25', function() {
+      thermostat.switchOff();
+      thermostat.increaseTemperature(8);
+      thermostat.switchOn();
+      expect(thermostat.temperature).toEqual(25);
+    });
+
   });
 
   describe('energy usage display', function() {
