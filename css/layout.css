@@ -30,3 +30,9 @@ h1 {
   left: 48%;
   top: 20%;
 }
+
+.reset {
+  position: fixed;
+  left: 48%;
+  top: 25%;
+}

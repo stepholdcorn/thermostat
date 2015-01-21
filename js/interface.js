@@ -23,4 +23,9 @@ $(document).ready(function(){
     $('h1').text(thermostat.temperature);
   });
 
+  $('.reset').on('click', function() {
+    thermostat.resetTemperature();
+    $('h1').text(thermostat.temperature);
+  });
+
 });
