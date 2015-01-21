@@ -4,4 +4,11 @@ h1 {
   font-weight: bold;
   position: fixed;
   left: 50%;
+
+}
+
+.increase-temp {
+  position: fixed;
+  left: 50%;
+  top: 10%;
 }

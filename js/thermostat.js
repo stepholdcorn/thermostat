@@ -3,20 +3,21 @@ var Thermostat = function() {
   this.minimum = 10;
   this.powerSave = true;
   this.maximum = 25;
+  this.changeTempBy = 1;
 };
 
-Thermostat.prototype.increaseTemperature = function(changeTempBy) {
-  if (this.temperature + changeTempBy <= this.maximum) {
-    this.temperature += changeTempBy;
+Thermostat.prototype.increaseTemperature = function() {
+  if (this.temperature + this.changeTempBy <= this.maximum) {
+    this.temperature += this.changeTempBy;
   }
   else {
     this.temperature = this.maximum;
   };
 };
 
-Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
-  if (this.temperature - changeTempBy >= this.minimum) {
-    this.temperature -= changeTempBy;
+Thermostat.prototype.decreaseTemperature = function() {
+  if (this.temperature - this.changeTempBy >= this.minimum) {
+    this.temperature -= this.changeTempBy;
   }
   else {
     this.temperature = this.minimum;
