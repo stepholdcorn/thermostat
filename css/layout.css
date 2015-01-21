@@ -9,6 +9,12 @@ h1 {
 
 .increase-temp {
   position: fixed;
-  left: 50%;
+  left: 48%;
+  top: 10%;
+}
+
+.decrease-temp {
+  position: fixed;
+  left: 52%;
   top: 10%;
 }
