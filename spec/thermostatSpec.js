@@ -66,18 +66,18 @@ describe('Thermostat', function() {
       expect(thermostat.maximum).toEqual(32);
     });
 
-    it("should not increase temperature above 25 degrees when power saving mode is on", function() {
+    it("should not increase temperature above 25 degrees when on", function() {
       thermostat.increaseTemperature(6);
       expect(thermostat.temperature).toEqual(25);
     });
 
-    it("should not increase temperature above 32 degrees when power saving mode is off", function(){
+    it("should not increase temperature above 32 degrees when off", function(){
       thermostat.switchOff();
       thermostat.increaseTemperature(13);
       expect(thermostat.temperature).toEqual(32);
     });
 
-    it('should default to 25 degrees if switched off when temperature is above 25', function() {
+    it('should default to 25 degrees if switched on when temperature is above 25', function() {
       thermostat.switchOff();
       thermostat.increaseTemperature(8);
       thermostat.switchOn();
