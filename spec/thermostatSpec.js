@@ -68,4 +68,12 @@ describe('Thermostat', function() {
 
   });
 
+  describe('energy usage display', function() {
+
+    it('should be green when temperature less than 18 degrees', function() {
+      thermostat.decreaseTemperature(3);
+      expect(thermostat.displayColor()).toContain('Green');
+    });
+  });
+
 });
