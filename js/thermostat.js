@@ -24,3 +24,7 @@ Thermostat.prototype.switchOff = function() {
   this.powerSave = false;
   this.maximum = 32;
 };
+
+Thermostat.prototype.resetTemperature = function(){
+  this.temperature = 20;
+};

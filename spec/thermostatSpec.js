@@ -26,6 +26,11 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(19);
     });
 
+    it ('can reset', function(){
+      thermostat.resetTemperature();
+      expect(thermostat.temperature).toEqual(20);
+    });
+
   });
 
   describe('temperate limit', function() {
