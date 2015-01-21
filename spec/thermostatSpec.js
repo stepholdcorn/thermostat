@@ -74,6 +74,10 @@ describe('Thermostat', function() {
       thermostat.decreaseTemperature(3);
       expect(thermostat.displayColor()).toContain('Green');
     });
+
+    it ('should be yellow when temperature is between 18 and 24 degrees', function() {
+      expect(thermostat.displayColor()).toContain('Yellow');
+    });
   });
 
 });
