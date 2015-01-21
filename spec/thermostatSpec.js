@@ -78,6 +78,12 @@ describe('Thermostat', function() {
     it ('should be yellow when temperature is between 18 and 24 degrees', function() {
       expect(thermostat.displayColor()).toContain('Yellow');
     });
+
+    it ('should be red when temperature is over 24 degrees', function() {
+      thermostat.increaseTemperature(5);
+      expect(thermostat.displayColor()).toContain('Red');
+    });
+
   });
 
 });

@@ -12,10 +12,10 @@ Thermostat.prototype.increaseTemperature = function(changeTempBy) {
 Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
 
   if (this.temperature - changeTempBy >= this.minimum) {
-      this.temperature -= changeTempBy;
+    this.temperature -= changeTempBy;
   }
   else {
-     this.temperature = this.minimum;
+    this.temperature = this.minimum;
   };
 
 };
@@ -30,9 +30,13 @@ Thermostat.prototype.resetTemperature = function() {
 };
 
 Thermostat.prototype.displayColor = function() {
-  if (this.temperature < 18){
-      return 'Green';
-  } else {
-      return 'Yellow';
+  if (this.temperature < 18) {
+    return 'Green';
+  }
+  else if (this.temperature > 24) {
+    return 'Red';
+  }
+  else {
+    return 'Yellow';
   };
 };
