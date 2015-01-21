@@ -18,3 +18,9 @@ h1 {
   left: 52%;
   top: 10%;
 }
+
+.powersave-off {
+  position: fixed;
+  left: 48%;
+  top: 15%;
+}
