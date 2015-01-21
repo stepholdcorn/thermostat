@@ -32,6 +32,7 @@ Thermostat.prototype.switchOff = function() {
 Thermostat.prototype.switchOn = function(){
   this.powerSave = true;
   this.maximum = 25;
+  
   if(this.temperature > this.maximum){
     this.temperature = this.maximum;
   }else{

@@ -18,4 +18,9 @@ $(document).ready(function(){
     thermostat.switchOff();
   });
 
+  $('.powersave-on').on('click', function(){
+    thermostat.switchOn();
+    $('h1').text(thermostat.temperature);
+  });
+
 });

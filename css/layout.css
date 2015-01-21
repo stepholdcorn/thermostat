@@ -24,3 +24,9 @@ h1 {
   left: 48%;
   top: 15%;
 }
+
+.powersave-on {
+  position: fixed;
+  left: 48%;
+  top: 20%;
+}
