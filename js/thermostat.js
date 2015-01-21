@@ -11,13 +11,12 @@ Thermostat.prototype.increaseTemperature = function(changeTempBy) {
 
 Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
 
-  // if (this.temperature > this.minimum && this.temperature - changeTempBy >= this.minimum){
-  //     this.temperature -= changeTempBy;
-  // }else{
-  //   return 10;
-  // };
-
-     this.temperature -= changeTempBy;
+  if (this.temperature - changeTempBy >= this.minimum) {
+      this.temperature -= changeTempBy;
+  }
+  else {
+     this.temperature = this.minimum;
+  };
 
 };
 
