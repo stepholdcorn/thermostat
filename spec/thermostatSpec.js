@@ -66,7 +66,7 @@ describe('Thermostat', function() {
       expect(thermostat.maximum).toEqual(32);
     });
 
-    it("should not increase temperature above 25 degree when power saving mode is on", function(){
+    it("should not increase temperature above 25 degrees when power saving mode is on", function() {
       thermostat.increaseTemperature(6);
       expect(thermostat.temperature).toEqual(25);
     });
@@ -93,6 +93,3 @@ describe('Thermostat', function() {
 
 });
 
-
-// above 32
-//

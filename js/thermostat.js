@@ -6,18 +6,21 @@ var Thermostat = function() {
 };
 
 Thermostat.prototype.increaseTemperature = function(changeTempBy) {
-  this.temperature += changeTempBy;
+  if (this.temperature + changeTempBy <= this.maximum) {
+    this.temperature += changeTempBy;
+  }
+  else {
+    this.temperature = this.maximum;
+  };
 };
 
 Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
-
   if (this.temperature - changeTempBy >= this.minimum) {
     this.temperature -= changeTempBy;
   }
   else {
     this.temperature = this.minimum;
   };
-
 };
 
 Thermostat.prototype.switchOff = function() {
