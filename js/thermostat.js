@@ -6,18 +6,20 @@ var Thermostat = function() {
   this.changeTempBy = 1;
 };
 
-Thermostat.prototype.increaseTemperature = function() {
-  if (this.temperature + this.changeTempBy <= this.maximum) {
-    this.temperature += this.changeTempBy;
+Thermostat.prototype.increaseTemperature = function(changeTempBy) {
+  changeTempBy = changeTempBy || this.changeTempBy;
+  if (this.temperature + changeTempBy <= this.maximum) {
+    this.temperature += changeTempBy;
   }
   else {
     this.temperature = this.maximum;
   };
 };
 
-Thermostat.prototype.decreaseTemperature = function() {
-  if (this.temperature - this.changeTempBy >= this.minimum) {
-    this.temperature -= this.changeTempBy;
+Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
+  changeTempBy = changeTempBy || this.changeTempBy;
+  if (this.temperature - changeTempBy >= this.minimum) {
+    this.temperature -= changeTempBy;
   }
   else {
     this.temperature = this.minimum;
@@ -32,7 +34,7 @@ Thermostat.prototype.switchOff = function() {
 Thermostat.prototype.switchOn = function(){
   this.powerSave = true;
   this.maximum = 25;
-  
+
   if(this.temperature > this.maximum){
     this.temperature = this.maximum;
   }else{
