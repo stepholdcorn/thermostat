@@ -33,7 +33,7 @@ describe('Thermostat', function() {
 
   });
 
-  describe('temperate limit', function() {
+  describe('temperature lower limit', function() {
 
     it('has a minimum of 10 degrees', function() {
       expect(thermostat.minimum).toEqual(10);
@@ -66,6 +66,11 @@ describe('Thermostat', function() {
       expect(thermostat.maximum).toEqual(32);
     });
 
+    it("should not increase temperature above 25 degree when power saving mode is on", function(){
+      thermostat.increaseTemperature(6);
+      expect(thermostat.temperature).toEqual(25);
+    });
+
   });
 
   describe('energy usage display', function() {
@@ -87,3 +92,7 @@ describe('Thermostat', function() {
   });
 
 });
+
+
+// above 32
+//
