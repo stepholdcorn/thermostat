@@ -71,6 +71,12 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toEqual(25);
     });
 
+    it("should not increase temperature above 32 degrees when power saving mode is off", function(){
+      thermostat.switchOff();
+      thermostat.increaseTemperature(13);
+      expect(thermostat.temperature).toEqual(32);
+    });
+
   });
 
   describe('energy usage display', function() {
@@ -92,4 +98,3 @@ describe('Thermostat', function() {
   });
 
 });
-
