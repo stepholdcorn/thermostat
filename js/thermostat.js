@@ -4,6 +4,12 @@ var Thermostat = function() {
   this.powerSave = true;
   this.maximum = 25;
   this.changeTempBy = 1;
+
+  this.maximumPowerSaveOn = 25;
+  this.maximumPowerSaveOff = 32;
+  this.resetTemperatureValue = 20;
+  this.ecoFriendlyValue = 18;
+  this.energyIntenseValue = 24;
 };
 
 Thermostat.prototype.increaseTemperature = function(changeTempBy) {
@@ -28,12 +34,12 @@ Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
 
 Thermostat.prototype.switchOff = function() {
   this.powerSave = false;
-  this.maximum = 32;
+  this.maximum = this.maximumPowerSaveOff;
 };
 
 Thermostat.prototype.switchOn = function(){
   this.powerSave = true;
-  this.maximum = 25;
+  this.maximum = this.maximumPowerSaveOn;
 
   if(this.temperature > this.maximum){
     this.temperature = this.maximum;
@@ -43,14 +49,14 @@ Thermostat.prototype.switchOn = function(){
 };
 
 Thermostat.prototype.resetTemperature = function() {
-  this.temperature = 20;
+  this.temperature = this.resetTemperatureValue;
 };
 
 Thermostat.prototype.displayColor = function() {
-  if (this.temperature < 18) {
+  if (this.temperature < this.ecoFriendlyValue) {
     return 'Green';
   }
-  else if (this.temperature > 24) {
+  else if (this.temperature > this.energyIntenseValue) {
     return 'Red';
   }
   else {
