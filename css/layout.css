@@ -1,10 +1,10 @@
 h1 {
-  font-weight: bold;
-  position: relative;
+  position: fixed;
   top: 20%;
+  transform: translateY(-80%);
   text-align: right;
+  font-weight: bold;
   font-size: 2000%;
-  transform: translateY(-80%)
 }
 
 .energyNeutral{
@@ -19,15 +19,18 @@ h1 {
   color: #4DDB94;
 }
 
-.increase-temp {
-  left: 48%;
-  top: 10%;
+button{
+  border: none;
+  background-color: white;
 }
 
-.decrease-temp {
-  left: 52%;
-  top: 10%;
+.increase-temp{
+  position: relative;
+  top: 50%;
+  text-align: right;
+  font-size: 400%;
 }
+
 
 .powersave-off {
   left: 48%;
@@ -37,11 +40,6 @@ h1 {
 .powersave-on {
   left: 48%;
   top: 20%;
-}
-
-.reset {
-  left: 48%;
-  top: 25%;
 }
 
 .col-1{
@@ -78,6 +76,7 @@ h1 {
 }
 
 svg{
-  position: fixed;
-  top: 62%;
+  position: relative;
+  top: 65%;
+  transform: translateY(-35%);
 }
