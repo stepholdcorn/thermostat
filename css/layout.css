@@ -72,3 +72,8 @@ h1 {
   float: left;
   height: 100vh;
 }
+
+svg{
+  position: fixed;
+  top: 62%;
+}
