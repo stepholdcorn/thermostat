@@ -1,38 +1,89 @@
+/*@import url('grid.css');*/
+
+
+
 h1 {
 
-  color: #FFAD33;
+  /*color: #FFAD33;*/
   font-weight: bold;
-  position: fixed;
+  /*position: fixed;*/
   left: 50%;
-
 }
 
+.energyNeutral{
+  color: #FFAD33;
+}
+
+.energyIntense{
+  color: #FF4719;
+}
+
+.energyNecoFriendly{
+  color: #4DDB94;
+}
+
+
 .increase-temp {
-  position: fixed;
+  /*position: fixed;*/
   left: 48%;
   top: 10%;
 }
 
 .decrease-temp {
-  position: fixed;
+  /*position: fixed;*/
   left: 52%;
   top: 10%;
 }
 
 .powersave-off {
-  position: fixed;
+  /*position: fixed;*/
   left: 48%;
   top: 15%;
 }
 
 .powersave-on {
-  position: fixed;
+  /*position: fixed;*/
   left: 48%;
   top: 20%;
 }
 
 .reset {
-  position: fixed;
+  /*position: fixed;*/
   left: 48%;
   top: 25%;
+}
+
+.col-1{
+  width: 27.5%;
+  background-color: red;
+  float: left;
+  height: 100vh;
+}
+
+.col-2{
+  width: 27.5%;
+  background-color: blue;
+  float: left;
+  height: 100vh;
+}
+
+.col-3{
+  width: 20%;
+  background-color: orange;
+  float: left;
+  height: 100vh;
+}
+
+.col-4{
+  width: 5%;
+  background-color: green;
+  float: left;
+  height: 100vh;
+}
+
+.col-5{
+  width: 20%;
+  background-color: yellow;
+  float: left;
+  height: 100vh;
 }

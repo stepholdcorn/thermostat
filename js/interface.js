@@ -2,6 +2,9 @@ var thermostat = new Thermostat();
 
 $(document).ready(function(){
 
+  
+  $('h1').attr('class', thermostat.displayColor())
+
   $('h1').text(thermostat.temperature);
 
   $('.increase-temp').on('click', function() {
@@ -27,5 +30,7 @@ $(document).ready(function(){
     thermostat.resetTemperature();
     $('h1').text(thermostat.temperature);
   });
+
+
 
 });

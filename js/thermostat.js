@@ -54,12 +54,12 @@ Thermostat.prototype.resetTemperature = function() {
 
 Thermostat.prototype.displayColor = function() {
   if (this.temperature < this.ecoFriendlyValue) {
-    return 'Green';
+    return 'ecoFriendly';
   }
   else if (this.temperature > this.energyIntenseValue) {
-    return 'Red';
+    return 'energyIntense';
   }
   else {
-    return 'Yellow';
+    return 'energyNeutral';
   };
 };

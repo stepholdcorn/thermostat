@@ -90,16 +90,16 @@ describe('Thermostat', function() {
 
     it('should be green when temperature less than 18 degrees', function() {
       thermostat.decreaseTemperature(3);
-      expect(thermostat.displayColor()).toContain('Green');
+      expect(thermostat.displayColor()).toContain('ecoFriendly');
     });
 
     it ('should be yellow when temperature is between 18 and 24 degrees', function() {
-      expect(thermostat.displayColor()).toContain('Yellow');
+      expect(thermostat.displayColor()).toContain('energyNeutral');
     });
 
     it ('should be red when temperature is over 24 degrees', function() {
       thermostat.increaseTemperature(5);
-      expect(thermostat.displayColor()).toContain('Red');
+      expect(thermostat.displayColor()).toContain('energyIntense');
     });
 
   });
