@@ -19,7 +19,7 @@ Thermostat.prototype.increaseTemperature = function(changeTempBy) {
   }
   else {
     this.temperature = this.maximum;
-  };
+  }
 };
 
 Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
@@ -29,7 +29,7 @@ Thermostat.prototype.decreaseTemperature = function(changeTempBy) {
   }
   else {
     this.temperature = this.minimum;
-  };
+  }
 };
 
 Thermostat.prototype.switchOff = function() {
@@ -43,9 +43,7 @@ Thermostat.prototype.switchOn = function(){
 
   if(this.temperature > this.maximum){
     this.temperature = this.maximum;
-  }else{
-    this.temperature;
-  };
+  }
 };
 
 Thermostat.prototype.resetTemperature = function() {
@@ -61,5 +59,5 @@ Thermostat.prototype.displayColor = function() {
   }
   else {
     return 'energyNeutral';
-  };
+  }
 };
